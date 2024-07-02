@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input {
+            margin: 10px 0;
+        }
+
+        button {
+            border: none;
+            border-radius: 10px;
+            background-color: violet;
+            padding: 10px;
+        }
+
+        #error-message {
+            font-size: large;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Дни до дня рождения</h1>
+    <input type="date" name="days-to-birthday" id="days-to-birthday">
+    <button id="button">Посчитать</button>
+    <p id="output"></p>
+    <p id="error-message" class="error" style="display: none">Введите дату!</p>
+
+    <script src="daysToBirthday.js"></script>
+</body>
+</html>

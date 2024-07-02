@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="improvedService.css">
+    <title>Comment Service</title>
+</head>
+<body>
+    <h1>Сервис комментариев со спам фильтром</h1>
+    <div class="container">
+        <form class="input">
+        <h2>Оставьте ваш комментарий</h2>
+        <div class="radio-container">
+            <span>Показывать ваше имя?</span>
+            <input type="radio" name="approve" id="radio-yes">
+            <label for="radio-yes" class = "checkmark">Yes</label>
+            <input type="radio" name="approve" id="radio-no">
+            <label for="radio-no" class = "checkmark">No</label>
+        </div>
+        <label for="name">Введите ваше <span>имя</span></label>
+        <input type="text" placeholder="введите имя" class="name">
+        <label for="link">Введите ссылку <span>вашего аватара</span></label>
+        <input type="url" placeholder="вставьте ссылку" name="" class="link">
+        <label for="message">Оставьте комментарий</label>
+        <input type="text" placeholder="введите сообщение" class="message">
+        <button type="submit" class="form-button">Отправить</button>
+        </form>
+        
+
+        <div class="output">
+            <h2>Чат</h2>
+            <div class="result">
+                <div class="result-image"></div>
+                <div class="result-name"></div>
+                <div class="result-date"></div>
+                <div class="result-message" alt="Avatar"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="improvedService.js"></script>
+</body>
+</html>

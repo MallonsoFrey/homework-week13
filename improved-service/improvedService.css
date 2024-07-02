@@ -1,0 +1,121 @@
+html {
+    box-sizing: border-box;
+    background-color: rgb(32, 32, 32);
+    color: white;
+}
+
+.container {
+    display: flex;
+    height: 60vh;
+}
+
+.input, .output {
+    display: flex;
+    flex-direction: column;
+    margin: 0 3rem;
+    justify-content: flex-start;
+}
+
+.input {
+    width: 40%;
+}
+
+.output {
+    width: 60%;
+}
+
+.output, .message {
+    flex-grow: 1;
+}
+
+.input input {
+    height: 40px; 
+    border: 2px dashed rgb(77, 77, 255);  
+    border-radius: 5px; 
+    padding: 10px; 
+    margin-bottom: 20px;  
+    box-sizing: border-box;  
+    background-color: inherit;
+    color: white;
+}
+
+.form-button {
+    width: 40%;
+    padding: 0.5rem 1rem;
+    background-color: rgb(77, 77, 255);
+    color: white;
+}
+
+.result {
+    border-bottom: 2px dashed rgb(77, 77, 255);
+    display: grid;
+    grid-template-columns: fit-content(100px) 200px;
+    align-items: center;
+}
+.result-name {
+    color: rgb(77, 77, 255);
+    grid-column: 2 / 3;
+    margin-left: 20px;
+}
+.result-date {
+    grid-column: 3 / 4;
+    text-align: right;
+}
+.result-message {
+    grid-column: 1 / 3;
+}
+
+span {
+    font-weight: 700;
+}
+
+h2 {
+    justify-self: flex-end;
+    color: rgb(77, 77, 255);
+}
+
+img {
+    max-width: 100%;
+}
+
+.radio-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.radio-container input { /*скрываем стандартные радио-кнопки*/
+    display: none;
+}
+
+.radio-container label {
+    position: relative;
+    cursor: pointer;
+}
+
+.radio-container label::before { /*пользовательская радио-кнопка*/
+    display: inline-block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 2px dashed rgb(77, 77, 255);
+}
+
+.radio-container label::after {/*внутренняя часть радио-кнопки, когда она выбрана*/
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background-color:  rgb(77, 77, 255);
+    display: inline-block;
+    right: 23px;
+    top: 4px;
+    margin: -1px 3px;
+    opacity: 0;
+}
+
+.radio-container input[type = "radio"]:checked + label::after {/*Когда радиокнопка выбрана, псевдоэлемент ::after у label становится видимым*/
+    opacity: 1;
+}
