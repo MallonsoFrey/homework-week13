@@ -9,7 +9,7 @@ const resultMessage = document.querySelector('.result-message');//элемент
 const resultDate = document.querySelector('.result-date');//элемент для показа текущей даты
 
 function checkSpam(str) { //цензура слова
-    return str.replace(/viagra/gi, '***');
+    return str.replace(/viagra|xxx/gi, '***');
 }
 
 function formatName(name) { //форматирование имени
@@ -75,4 +75,8 @@ button.addEventListener('click', function(event) {
         resultImage.innerHTML = '';;
         resultImage.appendChild(imgRandom);//добавляем элемент картинки в div resultImage
     }
+
+    nameInput.value = '';
+    linkInput.value = '';
+    messageInput.value = '';
 });
